@@ -1,5 +1,5 @@
 /** 
- * Segment tree template 2
+ * Segment Tree 2
  */
 
 struct ST {

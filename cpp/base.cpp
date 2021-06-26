@@ -1,5 +1,5 @@
 /**
- * Base template
+ * Base
  */
 
 #include "bits/stdc++.h"

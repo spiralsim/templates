@@ -1,5 +1,5 @@
 /**
- * DSU template 2
+ * DSU 2
  */
 
 struct query {

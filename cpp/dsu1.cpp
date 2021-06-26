@@ -1,5 +1,5 @@
 /**
- * DSU template 1
+ * DSU 1
  */
 
 struct DSU {
