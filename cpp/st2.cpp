@@ -6,7 +6,7 @@ struct ST {
 	struct STN {
 		int l, r, m;
 		int sum = 0;
-		STN *chd[2];
+		STN *chd[2]; // Children
 
 		STN (int l, int r) {
 			this->l = l, this->r = r, this->m = (l + r) / 2;
