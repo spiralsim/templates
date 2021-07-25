@@ -1,6 +1,6 @@
 /**
  * Base
- * Dependencies: C++ Super Header (if not already in library)
+ * Dependencies: None
  */
 
 #include <bits/stdc++.h>

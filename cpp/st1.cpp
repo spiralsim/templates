@@ -1,6 +1,6 @@
 /**
  * Segment Tree 1
- * Dependencies: Base
+ * Dependencies: None
  */
 
 struct ST {

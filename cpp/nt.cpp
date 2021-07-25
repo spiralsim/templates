@@ -1,6 +1,6 @@
 /**
  * Number Theory
- * Dependencies: Base
+ * Dependencies: `#include <std/bitsc++.h>`
  */
 
 // Adapted from https://github.com/12tqian/cp-library/blob/main/library/numerical/mod-int.hpp and Benjamin Qi
@@ -52,14 +52,14 @@ struct mi {
 };
 
 // Added by jt4517
-mi mul2 (ll a, ll b) {
+mi mul2 (long long a, long long b) {
 	mi ans = 1;
-	for (ll i = a; i <= b; i++) ans *= i;
+	for (long long i = a; i <= b; i++) ans *= i;
 	return ans;
 }
-mi fact (ll a) { return mul2(1, a); }
-mi npr (ll x, ll y) { return y <= x ? mul2(x - y + 1, x) : 0; } // Permute function
-mi ncr (ll x, ll y) { return y <= x ? npr(x, y) / fact(y) : 0; } // Choose function
+mi fact (long long a) { return mul2(1, a); }
+mi npr (long long x, long long y) { return y <= x ? mul2(x - y + 1, x) : 0; } // Permute function
+mi ncr (long long x, long long y) { return y <= x ? npr(x, y) / fact(y) : 0; } // Choose function
 
-td vector<mi> vm;
-td vector<vm> v2m;
+typedef std::vector<mi> vm;
+typedef std::vector<vm> v2m;

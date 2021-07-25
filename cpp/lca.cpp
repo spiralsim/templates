@@ -1,16 +1,16 @@
 /**
  * LCA
- * Dependencies: Base
+ * Dependencies: `#include <std/bitsc++.h>`
  */
 
 // Adapted from https://cp-algorithms.com/graph/lca_binary_lifting.html
 // (Copied July 25, 2021)
 int N, L;
-v2i adj;
+std::vector<std::vector<int>> adj;
 
 int timer;
-vi tIn, tOut;
-v2i up;
+std::vector<int> tIn, tOut;
+std::vector<std::vector<int>> up;
 
 void dfs (int u, int p) {
     tIn[u] = ++timer;
@@ -43,6 +43,6 @@ void prepLCA (int r) { // Preprocess with r as the root
     tOut.resize(N);
     timer = 0;
     L = ceil(log2(N));
-    up.assign(N, vi(L + 1));
+    up.assign(N, std::vector<int>(L + 1));
     dfs(r, r);
 }
