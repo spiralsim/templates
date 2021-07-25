@@ -1,8 +1,10 @@
 /**
  * LCA
+ * Dependencies: Base
  */
 
 // Adapted from https://cp-algorithms.com/graph/lca_binary_lifting.html
+// (Copied July 25, 2021)
 int N, L;
 v2i adj;
 

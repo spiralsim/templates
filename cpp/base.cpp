@@ -1,29 +1,47 @@
 /**
  * Base
+ * Dependencies: C++ Super Header (if not already in library)
  */
 
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 using namespace std;
 
-typedef long long      ll ;
-typedef double         db ;
-typedef long double    ld ;
-typedef pair<int, int> pii;
-typedef map<int, int>  mii;
-typedef set<int>       si ;
-typedef string         str;
-typedef vector<int>    vi ;
-typedef vector<vi>     v2i;
-typedef vector<si>     vsi;
-typedef vector<ll>     vl ;
-typedef vector<vl>     v2l;
-typedef vector<db>     vd ;
-typedef vector<bool>   vb ;
-typedef vector<pii>    vp ;
+#define td typedef
+#define pb push_back
+#define eb emplace_back
+#define all(x) x.begin(), x.end()
+#define sz(x) (int)(x).size()
+#define fi first
+#define se second
+
+// Some macros borrowed from Timothy Qian's template
+// https://github.com/12tqian/cp-library/blob/main/library/contest/template_full.cpp
+#define f1r(i, a, b) for (int i = (a); i < (b); i++)
+#define f0r(i, a) f1r(i, 0, a)
+#define FOR(i, a, b) for (int i = (a); i < (b); i++)
+#define F0R(i, a) FOR(i, 0, a)
+#define ROF(i, a, b) for (int i = (b) - 1; i >= (a); --i)
+#define R0F(i, a) ROF(i, 0, a)
+#define each(a, x) for (auto &a: x)
+
+td long long ll;
+td double db;
+td pair<int, int> pii;
+td map<int, int> mii;
+td set<int> si;
+td string str;
+td vector<int> vi;
+td vector<vi> v2i;
+td vector<si> vsi;
+td vector<ll> vl;
+td vector<vl> v2l;
+td vector<db> vd;
+td vector<bool> vb;
+td vector<pii> vp;
 
 void fastIO () {
 	ios_base::sync_with_stdio(false);
-	cin.tie(0), cout.tie(0);
+	cin.tie(0);
 }
 void fileIO (string file) {
 	freopen((file + ".in").c_str(), "r", stdin);
@@ -33,12 +51,12 @@ void fileIO (string file) {
 // Debugging an arbitrary value or vector of values
 template <class T>
 void debug (string s, vector<T> a) {
-	cout << "[Debug] " << s << " = ";
+	cerr << "[Debug] " << s << " = ";
 	for (int i = 0; i < a.size(); i++) {
-		cout << a[i];
-		if (i < a.size() - 1) cout << ", ";
+		cerr << a[i];
+		if (i < a.size() - 1) cerr << ", ";
 	}
-	cout << '\n';
+	cerr << '\n';
 }
 template <class T>
 void debug (string s, T x) {
@@ -49,7 +67,13 @@ void debug (T x) {
 	debug("*", x);
 }
 
+void solve () {
+
+}
+
 int main () {
 	fastIO();
-	
+	int T = 1;
+	cin >> T;
+	while (T--) solve();
 }

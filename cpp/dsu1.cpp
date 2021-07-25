@@ -1,5 +1,6 @@
 /**
  * DSU 1
+ * Dependencies: Base
  */
 
 struct DSU {

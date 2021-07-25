@@ -1,5 +1,6 @@
 /**
  * DSU 2
+ * Dependencies: DSU 1
  */
 
 struct query {
