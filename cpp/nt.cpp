@@ -9,7 +9,6 @@
 // Common primes: 1e9 + 7, 1e9 + 9, 998244353, 999999937, 9973
 
 // Modular int (mi) that works in prime fields
-#pragma once
 
 const int MOD = 1e9 + 7;
 
