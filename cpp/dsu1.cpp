@@ -33,7 +33,7 @@ struct DSU {
 	std::stack<int> cpts; // Checkpoints
 	
 	int get (int a) {
-		return p[a] == a ? a : get(p[a]);
+		return p[a] = a == p[a] ? a : get(p[a]);
 	}
 	// Union of a and b
 	void uni (int a, int b) {
