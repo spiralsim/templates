@@ -1,5 +1,3 @@
-// http://gcc.gnu.org/onlinedocs/gcc-4.8.0/libstdc++/api/a01541_source.html
-
 // C++ includes used for precompiling -*- C++ -*-
 
 // Copyright (C) 2003-2013 Free Software Foundation, Inc.
