@@ -12,21 +12,27 @@ using namespace std;
 #define fi first
 #define se second
 
-td long long ll;
-td double db;
-td pair<int, int> pii;
 td map<int, int> mii;
-td set<int> si;
 td string str;
+
+td pair<int, int> pii;
+td vector<pii> vp;
+
 td vector<int> vi;
 td vector<vi> v2i;
+
+td set<int> si;
 td vector<si> vsi;
+
+td long long ll;
 td vector<ll> vl;
 td vector<vl> v2l;
+
+td double db;
 td vector<db> vd;
 td vector<vd> v2d;
+
 td vector<bool> vb;
-td vector<pii> vp;
 
 void fastIO() {
 	ios_base::sync_with_stdio(false);
