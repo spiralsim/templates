@@ -33,6 +33,7 @@ td vector<db> vd;
 td vector<vd> v2d;
 
 td vector<bool> vb;
+td vector<vb> v2b;
 
 void fastIO() {
 	ios_base::sync_with_stdio(false);
