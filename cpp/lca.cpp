@@ -12,7 +12,7 @@ int timer;
 std::vector<int> tIn, tOut;
 std::vector<std::vector<int>> up;
 
-void dfs (int u, int p) {
+void dfs(int u, int p) {
     tIn[u] = ++timer;
     up[u][0] = p;
     for (int i = 1; i <= L; i++) up[u][i] = up[up[u][i - 1]][i - 1];
@@ -24,11 +24,11 @@ void dfs (int u, int p) {
     tOut[u] = ++timer;
 }
 
-bool isAnc (int u, int v) { // isAncestor
+bool isAnc(int u, int v) { // isAncestor
     return tIn[u] <= tIn[v] && tOut[u] >= tOut[v];
 }
 
-int lca (int u, int v) {
+int lca(int u, int v) {
     if (isAnc(u, v)) return u;
     if (isAnc(v, u)) return v;
     for (int i = L; i >= 0; i--) {
@@ -37,7 +37,7 @@ int lca (int u, int v) {
     return up[u][0];
 }
 
-void prepLCA (int r) { // Preprocess with r as the root 
+void prepLCA(int r) { // Preprocess with r as the root 
     assert(adj.size());
     tIn.resize(N);
     tOut.resize(N);

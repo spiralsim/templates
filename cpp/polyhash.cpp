@@ -8,7 +8,7 @@ const long long X1 = 9973, X2 = 9974;
 struct PolyHash {
 	vm hsh1, hsh2, p1, p2;
 
-	PolyHash (std::string s) {
+	PolyHash(std::string s) {
 		int N = s.size();
 		hsh1 = hsh2 = p1 = p2 = vm(N + 1);
 		p1[0] = p2[0] = 1;
@@ -20,7 +20,7 @@ struct PolyHash {
 		}
 	}
 
-	pair<mi, mi> getHash (int a, int k) {
+	pair<mi, mi> getHash(int a, int k) {
 		return {
 			hsh1[a + k] - hsh1[a] * p1[k],
 			hsh2[a + k] - hsh2[a] * p2[k]

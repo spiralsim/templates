@@ -50,15 +50,15 @@ struct mi {
 	friend mi operator/(mi a, const mi &b) { return a /= b; }
 };
 
-// Added by jt4517
-mi mul2 (long long a, long long b) {
+// Added independently
+mi mul2(long long a, long long b) {
 	mi ans = 1;
 	for (long long i = a; i <= b; i++) ans *= i;
 	return ans;
 }
-mi fact (long long a) { return mul2(1, a); }
-mi npr (long long x, long long y) { return y <= x ? mul2(x - y + 1, x) : 0; } // Permute function
-mi ncr (long long x, long long y) { return y <= x ? npr(x, y) / fact(y) : 0; } // Choose function
+mi fact(long long a) { return mul2(1, a); }
+mi npr(long long x, long long y) { return y <= x ? mul2(x - y + 1, x) : 0; } // Permute function
+mi ncr(long long x, long long y) { return y <= x ? npr(x, y) / fact(y) : 0; } // Choose function
 
 typedef std::vector<mi> vm;
 typedef std::vector<vm> v2m;

@@ -8,7 +8,7 @@ struct query {
 	int t;
 	int u, v;
 
-	query (char op, int t, int u = -1, int v = -1) {
+	query(char op, int t, int u = -1, int v = -1) {
 		this->op = op;
 		this->t = t;
 		this->u = u, this->v = v;
@@ -20,7 +20,7 @@ struct seg {
 	int u, v;
 	int l, r;
 
-	seg (int u, int v, int l, int r) {
+	seg(int u, int v, int l, int r) {
 		this->u = u, this->v = v;
 		this->l = l, this->r = r;
 	}
@@ -33,20 +33,20 @@ struct ST {
 		STN *chd[2];
 		vector<seg> segs;
 
-		STN (int l, int r) {
+		STN(int l, int r) {
 			this->l = l, this->r = r, this->m = (l + r) / 2;
 			if (l < r) chd[0] = new STN(l, m), chd[1] = new STN(m + 1, r);
 		}
 
 		// Process a time segment on which an edge exists
-		void apply (int l, int r, seg s) {
+		void apply(int l, int r, seg s) {
 			if (l == this->l && r == this->r) segs.push_back(s);
 			else if (r <= this->m) chd[0]->apply(l, r, s);
 			else if (l > this->m) chd[1]->apply(l, r, s);
 			else chd[0]->apply(l, m, s), chd[1]->apply(m + 1, r, s);
 		}
 		// Fully process this time segment and store component counts
-		void proc (DSU *d, vi &cntT) {
+		void proc(DSU *d, vi &cntT) {
 			d->save();
 			for (seg s: segs) d->uni(s.u, s.v);
 			if (l == r) cntT[l] = d->cnt;
@@ -56,19 +56,19 @@ struct ST {
 	};
 	STN *root;
 
-	ST (int n) {
+	ST(int n) {
 		root = new STN(0, n - 1);
 	}
 
-	void apply (seg s) {
+	void apply(seg s) {
 		root->apply(s.l, s.r, s);
 	}
-	void proc (DSU *d, vi &ans) {
+	void proc(DSU *d, vi &ans) {
 		root->proc(d, ans);
 	}
 };
 
-int main () {
+int main() {
 	fastIO();
 	vector<query> queries;
 	int t;
