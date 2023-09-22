@@ -1,39 +1,27 @@
 /**
- * Base
+ * BEGINNING OF BASE TEMPLATE
  * Dependencies: None
  */
 
 #include "bits/stdc++.h"
 using namespace std;
 
-#define td typedef
-#define pb push_back
-#define eb emplace_back
-#define fi first
-#define se second
-
-td map<int, int> mii;
-td string str;
-
-td pair<int, int> pii;
-td vector<pii> vp;
-
-td vector<int> vi;
-td vector<vi> v2i;
-
-td set<int> si;
-td vector<si> vsi;
-
-td long long ll;
-td vector<ll> vl;
-td vector<vl> v2l;
-
-td double db;
-td vector<db> vd;
-td vector<vd> v2d;
-
-td vector<bool> vb;
-td vector<vb> v2b;
+typedef map<int, int> mi2;
+typedef string str;
+typedef pair<int, int> pi2;
+typedef vector<pi2> vp;
+typedef vector<int> vi;
+typedef vector<vi> v2i;
+typedef set<int> si;
+typedef vector<si> vsi;
+typedef long long ll;
+typedef vector<ll> vl;
+typedef vector<vl> v2l;
+typedef double db;
+typedef vector<db> vd;
+typedef vector<vd> v2d;
+typedef vector<bool> vb;
+typedef vector<vb> v2b;
 
 void fastIO() {
 	ios_base::sync_with_stdio(false);
@@ -44,24 +32,9 @@ void fileIO(string file) {
 	freopen((file + ".out").c_str(), "w", stdout);
 }
 
-// Debugging an arbitrary value or vector of values
-template <class T>
-void debug(string s, vector<T> a) {
-	cerr << "[Debug] " << s << " = ";
-	for (int i = 0; i < a.size(); i++) {
-		cerr << a[i];
-		if (i < a.size() - 1) cerr << ", ";
-	}
-	cerr << '\n';
-}
-template <class T>
-void debug(string s, T x) {
-	debug(s, vector<T>({x}));
-}
-template <class T>
-void debug(T x) {
-	debug("*", x);
-}
+/**
+ * END OF BASE TEMPLATE
+ */
 
 void solve() {
 
@@ -69,7 +42,7 @@ void solve() {
 
 int main() {
 	fastIO();
-	int T = 1;
-	cin >> T;
-	while (T--) solve();
+	int t = 1;
+	cin >> t;
+	while (t--) solve();
 }
