@@ -1,8 +1,3 @@
-/**
- * Segment Tree 1
- * Dependencies: None
- */
-
 struct ST {
 	int l, r, m;
 	ST *chd[2]; // Children
@@ -12,5 +7,3 @@ struct ST {
 		if (l < r) chd[0] = new ST(l, m), chd[1] = new ST(m + 1, r);
 	}
 };
-
-/* END OF ST1 TEMPLATE */

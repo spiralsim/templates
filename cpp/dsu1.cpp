@@ -1,8 +1,3 @@
-/**
- * DSU 1
- * Dependencies: `#include <bits/stdc++.h>`
- */
-
 struct DSU {
 	std::vector<int> p, r; // Parents and ranks/depths of elements
 	int cnt; // Count of disjoint sets

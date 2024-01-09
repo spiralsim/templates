@@ -1,8 +1,3 @@
-/** 
- * Segment Tree 2
- * Dependencies: None
- */
-
 struct ST {
 	int l, r, m;
 	int sum = 0;
@@ -29,7 +24,3 @@ struct ST {
 		else return chd[0]->getSum(l, m) + chd[1]->getSum(m + 1, r);
 	}
 };
-
-/*
-END OF ST2 TEMPLATE 
- */

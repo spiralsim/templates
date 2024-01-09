@@ -1,8 +1,3 @@
-/**
- * Polynomial Hash
- * Dependencies: Number Theory
- */
-
 const long long X1 = 9973, X2 = 9974;
 
 struct PolyHash {

@@ -1,8 +1,3 @@
-/**
- * LCA
- * Dependencies: `#include <std/bitsc++.h>`
- */
-
 // Adapted from https://cp-algorithms.com/graph/lca_binary_lifting.html
 // (Copied July 25, 2021)
 int N, L;

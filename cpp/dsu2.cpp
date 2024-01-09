@@ -1,8 +1,3 @@
-/**
- * DSU 2
- * Dependencies: DSU 1
- */
-
 struct query {
 	char op; // Operation (! = count components, anything else = toggle edge)
 	int t;

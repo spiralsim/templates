@@ -1,8 +1,3 @@
-/**
- * Number Theory
- * Dependencies: `#include <std/bitsc++.h>`
- */
-
 // Adapted from https://github.com/12tqian/cp-library/blob/main/library/numerical/mod-int.hpp and Benjamin Qi
 // (Copied July 25, 2021)
 
