@@ -1,5 +1,5 @@
 template <class T> struct ST {
-	static constexpr U = 2e9 + 5;
+	static constexpr T U = 2e9 + 5;
 	T f(T a, T b) { return min(a, b); }
 	int n;
 	vector<T> t;
