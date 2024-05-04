@@ -1,22 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
-typedef map<int, int> mi2;
-typedef pair<int, int> pi2;
-typedef vector<pi2> vp;
-typedef vector<int> vi;
-typedef vector<vi> v2i;
-typedef set<int> si;
-typedef vector<si> vsi;
-typedef vector<ll> vl;
-typedef vector<vl> v2l;
-typedef set<ll> sl;
-typedef double db;
-typedef vector<db> vd;
-typedef vector<vd> v2d;
-typedef vector<bool> vb;
-typedef vector<vb> v2b;
+using ll = long long;
+using mi2 = map<int, int>;
+using pi2 = pair<int, int>;
+using vi = vector<int>;
+using v2i = vector<vi>;
+using si = set<int>;
+using vsi = vector<si>;
+using vl = vector<ll>;
+using v2l = vector<vl>;
+using sl = set<ll>;
+using qi = queue<int>;
+using db = double;
+using vd = vector<db>;
+using v2d = vector<vd>;
+using vb = vector<bool>;
+using v2b = vector<vb>;
 
 // https://usaco.guide/gold/PURS?lang=cpp#finding-the-k-th-element
 #include <ext/pb_ds/assoc_container.hpp>
@@ -69,13 +69,16 @@ void debug(string s, T x, Args... args) {
 	debug(s.substr(s.find(',') + 2), args...);
 }
 
-void solve(int __i, int __t) {
+const int INF = 2'000'000'005;
+const ll INF_LL = 4'000'000'000'000'000'005;
+
+void solve(int i_, int t_) {
 
 }
 
 int main() {
 	fastIO();
-	int t = 1;
-	cin >> t;
-	for (int i = 1; i <= t; i++) solve(i, t);
+	int t_ = 1;
+	cin >> t_;
+	for (int i_ = 1; i_ <= t_; i_++) solve(i_, t_);
 }
