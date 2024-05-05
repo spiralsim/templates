@@ -1,5 +1,5 @@
 template <class T> struct ST {
-	static constexpr T U = 2e9 + 5;
+	T U = 2e9 + 5;
 	T f(T a, T b) { return min(a, b); }
 	int n;
 	vector<T> t;
@@ -15,12 +15,15 @@ template <class T> struct ST {
 			t[v] = f(t[2 * v], t[2 * v + 1]);
 		}
 	}
+	void upd(int i, T x) { upd(1, 0, n - 1, i, x); }
 	T query(int v, int tl, int tr, int l, int r) {
 		if (l > r) return U;
+		if (l == tl && r == tr) return t[v];
 		int tm = (tl + tr) / 2;
 		return f(
 			query(2 * v, tl, tm, l, min(r, tm)),
 			query(2 * v + 1, tm + 1, tr, max(l, tm + 1), r)
 		);
 	}
+	T query(int l, int r) { return query(1, 0, n - 1, l, r); }
 };
